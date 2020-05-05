@@ -2,6 +2,7 @@ package com.model;
 
 public class StatusUpdate {
 
+	// COMMENTS: You need to declare private
 	String description = "";
 	String user_title = "";
 	String created_at = "";

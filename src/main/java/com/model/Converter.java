@@ -1,3 +1,5 @@
+// COMMENTS: Converter should not be part of model. You should create services package and put this file in there
+// You also need to unit test this Converter
 package com.model;
 
 import java.io.IOException;
@@ -15,6 +17,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+// COMMENTS: Its very important to decide which method has to be private and public. Scan this file see which one you can make into private
 /*
  * Handles JSON to Java Conversion and Vice Versa
  * 
@@ -53,6 +56,7 @@ public class Converter {
 		try {
 			listCrypto = objectMapper.readValue(new URL(url), new TypeReference<List<Cryptocurrency>>() {
 			});
+			// COMMENTS: try using RestTemplate to make URL request or FeignClient. Any of those is fine
 			for (Cryptocurrency coin : listCrypto) {
 				map = objectMapper.readValue(new URL(
 						String.format(STATUS_UPDATE_URL, coin.getId())),

@@ -2,6 +2,8 @@ package com.model;
 
 import java.util.List;
 
+// COMMENTS: for all your model try to use lombok package
+// You can use @Builder and @Data annotation here
 public class Cryptocurrency {
 
 	private String id;

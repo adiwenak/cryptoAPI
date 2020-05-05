@@ -15,6 +15,7 @@ import com.model.StatusUpdate;
 import com.model.Converter;
 
 @RestController
+// COMMENTS: lets be explicit what path for this controller
 public class CryptocurrencyRestController extends Thread{
 
 	private final int numberOfCoinsToSearch = 10;
